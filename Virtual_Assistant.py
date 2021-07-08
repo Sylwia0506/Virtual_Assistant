@@ -127,25 +127,9 @@ while True:
             wikip = wikipedia.summary(definition, sentences=2)
             response = response + ' ' + wikip
 
-        if ('time'  in text):
-            now = datetime.datetime.now()
-            meridiem = ''
-            if now.hour >=12:
-                meridiem ='p.m'
-                hour = now.hour -12
-            else:
-                meridiem = 'a.m'
-                hour = now.hour
-            if now.minute < 10:
-                minute = '0' + str(now.minute)
-            else:
-                minute = str(now.minute)
-
-            response = response + ' ' + ' It is ' + str(hour) + ':' + minute + meridiem + '.'
 
         if (color(text) == True):
             response = response + color(text)
-
 
 
         else:
