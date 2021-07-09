@@ -19,7 +19,7 @@ def recordAudio():
         data = r.recognize_google(audio)
         print ('You said:'  + data)
     except sr.UnknownValueError:
-        print('Google Speech Recognition could not unterstand the audio, unknown error')
+        print('Google Speech Recognition could not understand the audio, unknown error')
     except sr.RequestError as e:
         print('Request result from Google Speeach Recognition service error' + e)
     return data
